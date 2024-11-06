@@ -1,43 +1,46 @@
 class Hotel:
-    def __init__(self,buget = 0 ,   name = " Unnamed Hotel", visitors_per_year = 0, number_of_rooms = 0 , owner_name = " Unknown owner " ,year_of_creation = 0 ):
-
-
+    def init(self, budget=0, name="Unnamed Hotel", visitors_per_year=0, number_of_rooms=0, owner_name="Unknown owner", year_of_creation=0):
+        self.budget = budget
+        self.__name = name
         self.__visitors_per_year = visitors_per_year
         self.__number_of_rooms = number_of_rooms
-        self.__name = name
-        self.year_of_creation = year_of_creation
         self.owner_name = owner_name
-        self.__buget = buget
+        self.year_of_creation = year_of_creation
 
+    @property
+    def budget(self):
+        return self.__budget
 
-    def get_buget(self):
-        return self.__buget
-    def set_buget(self, value):
-        self.__buget -= value
-        if self.__buget < value:
-            print("Error")
+    @budget.setter
+    def budget(self, value):
+        if value > self.__budget:
+            print("Error: Insufficient funds!")
+        else:
+            self.__budget -= value
 
-
-
-
-
-    def get_name(self):
+    @property
+    def name(self):
         return self.__name
-    def set_name(self, name):
-        self.__name = name
 
+    @name.setter
+    def name(self, value):
+        self.__name = value
 
-
-    def get_visitors_per_year(self):
+    @property
+    def visitors_per_year(self):
         return self.__visitors_per_year
-    def set_visitors_per_year(self, visitors_per_year):
-        self.__visitors_per_year = visitors_per_year
 
+    @visitors_per_year.setter
+    def visitors_per_year(self, value):
+        self.__visitors_per_year = value
 
-    def get_number_of_rooms(self):
+    @property
+    def number_of_rooms(self):
         return self.__number_of_rooms
-    def set_number_of_rooms(self , number_of_rooms):
-        self.__number_of_rooms = number_of_rooms
+
+    @number_of_rooms.setter
+    def number_of_rooms(self, value):
+        self.__number_of_rooms = value
 
 
 
