@@ -44,11 +44,11 @@ class Hotel:
 
 
 
-    def str(self):
+    def __str__(self):
         return f"Name: {self.__name}, Visitors per year: {self.__visitors_per_year}, Rooms: {self.__number_of_rooms}, Owner: {self.owner_name}, Year of creation: {self.year_of_creation}"
 
     def __del__(self):
-        return f"Object {self.__name} is deleted"
+        print(f"Object {self.__name} is deleted")
 
     def main(self):
 
