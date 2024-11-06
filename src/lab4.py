@@ -50,17 +50,14 @@ class Hotel:
     def __del__(self):
         print(f"Object {self.__name} is deleted")
 
-    def main(self):
+def main():
+    hotel1 = Hotel(10000, "Breath", 5000, 65, "Cristiano", 2003)
+    hotel2 = Hotel(20000, "Ocean", 1200, 35, "Messi", 1990)
+    hotel3 = Hotel(30000, "Grant", 7500, 50, "Rick", 2010)
 
-       hotel1 = Hotel(10000 ," Breath " , 5000  , 65 , "Cristiano", 2003 )
-       hotel2 = Hotel(20000," Ocean " ,1200, 35, "Messi" , 1990 )
-       hotel3 = Hotel(30000 , " Grant " , 7500 , 50 , "Rick" , 2010)
-       print(hotel1.___str___())
+    print(hotel1)
+    print(hotel2)
+    print(hotel3)
 
-
-
-
-
-
-hotel0 = Hotel()
-hotel0.main()
+if __name__ == "__main__":
+    main()
