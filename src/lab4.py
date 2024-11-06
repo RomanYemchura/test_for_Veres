@@ -44,9 +44,8 @@ class Hotel:
 
 
 
-    def ___str___(self):
-        return f"name : {self.__name} , visitors per year : {self.__visitors_per_year} , number of rooms : {self.__number_of_rooms} , owner name : {self.owner_name} , year of creation : {self.year_of_creation}"
-
+    def str(self):
+        return f"Name: {self.__name}, Visitors per year: {self.__visitors_per_year}, Rooms: {self.__number_of_rooms}, Owner: {self.owner_name}, Year of creation: {self.year_of_creation}"
 
     def __del__(self):
         return f"Object {self.__name} is deleted"
